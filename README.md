@@ -5,11 +5,11 @@ VGS Data Tokenization API use cases
 
 ## Usage (CLI)
 
-```bash
-> ./tokenize.sh value:classifier [value:classifier ...]
+```json
+> ./tokenize.sh value1:classifier1 [value2:classifier2 ...]
 ```
 
-```bash
+```json
 > ./detokenize.sh token1[,token2,...]
 ```
 
