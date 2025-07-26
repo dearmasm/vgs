@@ -8,9 +8,9 @@
 # This script tokenizes information using the Very Good Vault API
 echo "Very Good Security (VGS) Tokenizer"
 
-# Ensure USERID and PASSWORD are set
-if [ -z "$USERID" ] || [ -z "$PASSWORD" ]; then
-  echo "Error: USERID and PASSWORD environment variables must be set."
+# Ensure VGS_USERID and VGS_PASSWORD are set
+if [ -z "$VGS_USERID" ] || [ -z "$VGS_PASSWORD" ]; then
+  echo "Error: VGS_USERID and VGS_PASSWORD environment variables must be set."
   exit 0
 fi  
 
@@ -51,7 +51,7 @@ json_data="${json_data%,}]}"
 # Tokenize sensitive information using the Very Good Vault API
 response=$(curl https://api.sandbox.verygoodvault.com/aliases \
   -X POST \
-  -u "$USERID:$PASSWORD" \
+  -u "$VGS_USERID:$VGS_PASSWORD" \
   -H 'Content-Type: application/json' \
   -s \
   -d "$json_data")
