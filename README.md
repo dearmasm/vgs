@@ -1,7 +1,18 @@
 # vgs
 VGS Data Tokenization API use cases
 
-# Usage
+## Setup
+
+## Usage (CLI)
+
+```bash
+> ./tokenize.sh value:classifier [value:classifier ...]
+```
+
+```bash
+> ./detokenize.sh token1[,token2,...]
+```
+
 
 ## API Schema
 
