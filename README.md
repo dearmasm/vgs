@@ -5,11 +5,11 @@ VGS Data Tokenization API use cases
 
 ## Usage (CLI)
 
-```python
+```shell
 > ./tokenize.sh value1:classifier1 [value2:classifier2 ...]
 ```
 
-```python
+```shell
 > ./detokenize.sh token1[,token2,...]
 ```
 
