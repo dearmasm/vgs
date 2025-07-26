@@ -14,9 +14,9 @@
 
 echo "Very Good Security (VGS) Detokenizer"
 
-# Ensure USERID and PASSWORD are set
-if [ -z "$USERID" ] || [ -z "$PASSWORD" ]; then
-  echo "Error: USERID and PASSWORD environment variables must be set."
+# Ensure VGS_USERID and VGS_PASSWORD are set
+if [ -z "$VGS_USERID" ] || [ -z "$VGS_PASSWORD" ]; then
+  echo "Error: VGS_USERID and VGS_PASSWORD environment variables must be set."
   exit 0
 fi  
 
@@ -30,7 +30,7 @@ tokens=$(IFS=, ; echo "$*")
 
 # Make GET request to VGS API
 response=$(curl "https://api.sandbox.verygoodvault.com/aliases?q=${tokens}" \
-  -u "$USERID:$PASSWORD" \
+  -u "$VGS_USERID:$VGS_PASSWORD" \
   -H 'Content-Type: application/json' \
   -s \
   -v)
