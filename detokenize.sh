@@ -24,7 +24,7 @@ if [ "$#" -eq 0 ]; then
   echo "Usage: $0 token1,token2,..."
   exit 0
 fi
-
+ 
 # Build comma-separated list of tokens from command line arguments
 tokens=$(IFS=, ; echo "$*")
 
