@@ -29,6 +29,29 @@ Reference VGS different formats (and input value requirements/limitations) here:
 ## API Schema
 
 ### Tokenize
+```http
+POST /aliases
+{
+  "data": [
+    {
+      "value": $VALUE,
+      "classifiers": [
+        "$APP-DEFINED-LABEL"
+      ],
+      "format": "UUID",
+      "storage": "PERSISTENT"
+    }
+  ]
+}
+```
+
+### Detokenize
+
+
+
+## API Examples
+
+### Tokenize
 
 ```python
 HTTP POST https://api.sandbox.verygoodvault.com/aliases
