@@ -55,6 +55,7 @@ response=$(curl https://api.sandbox.verygoodvault.com/aliases \
   -H 'Content-Type: application/json' \
   -s \
   -d "$json_data")
+  #-v)      # Uncomment for verbose output
 
 # Check if the API call was successful
 if [ $? -ne 0 ]; then
@@ -73,7 +74,7 @@ echo "$response" | jq -r '.data[] | "\(.value):\(.classifiers[0]):\(.aliases[0].
   printf "%-40s | %-20s | %s\n" "$value" "$classifier" "$alias"
 done
 
-# Print success message
+echo "\n"
 echo "Tokenization completed successfully."
 exit 0  
 # End of script

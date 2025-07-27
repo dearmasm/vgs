@@ -32,8 +32,8 @@ tokens=$(IFS=, ; echo "$*")
 response=$(curl "https://api.sandbox.verygoodvault.com/aliases?q=${tokens}" \
   -u "$VGS_USERID:$VGS_PASSWORD" \
   -H 'Content-Type: application/json' \
-  -s \
-  -v)
+  -s)
+  #-v)      # Uncomment for verbose output
 
 if [ $? -ne 0 ]; then
   echo "Error: Failed to fetch values from tokens."
@@ -50,5 +50,6 @@ echo "$response" | jq -r '.data[] | "\(.aliases[0].alias):\(.classifiers[0]):\(.
   printf "%-40s | %-20s | %s\n" "$token" "$classifier" "$value"
 done    
 
+echo "\n"
 echo "detokenization completed successfully."
 exit 0
