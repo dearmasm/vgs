@@ -4,25 +4,25 @@ VGS Data Tokenization API use cases
 ## Setup
 Configure VGS account user ID and password credentials as environmental exports:
 ```python
-> export VGS_USERID=<my-vgs-userid>
-> export VGS_PASSWORD=<my-vgs-password>
+export VGS_USERID=<my-vgs-userid>
+export VGS_PASSWORD=<my-vgs-password>
 ```
 
 ## Optional Configuration
 Scripts will default to use VGS alias format of "UUID" but can be changed to use other formats by setting this environment variable:
 ```python
-> export VGS_TOKEN_ALIAS_FORMA=<vg-alias-format>
+export VGS_TOKEN_ALIAS_FORMA=<vg-alias-format>
 ```
 Reference VGS different formats (and input value requirements/limitations) here: https://www.verygoodsecurity.com/docs/vault/concepts/tokens#alias-formats
 
 ## Usage (CLI)
 
 ```python
-> ./tokenize.sh value1:classifier1 [value2:classifier2 ...]
+./tokenize.sh value1:classifier1 [value2:classifier2 ...]
 ```
 
 ```python
-> ./detokenize.sh token1[,token2,...]
+./detokenize.sh token1[,token2,...]
 ```
 
 
