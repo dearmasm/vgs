@@ -11,7 +11,7 @@ export VGS_PASSWORD={my_vgs_password}
 ## Optional Configuration
 Scripts will default to use VGS alias format of "UUID" but can be changed to use other formats by setting this environment variable:
 ```python
-export VGS_TOKEN_ALIAS_FORMA={vg_alias_format}
+export VGS_TOKEN_ALIAS_FORMAT={vg_alias_format}
 ```
 Reference VGS different formats (and input value requirements/limitations) here: https://www.verygoodsecurity.com/docs/vault/concepts/tokens#alias-formats
 
