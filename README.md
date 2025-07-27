@@ -28,6 +28,36 @@ Reference VGS different formats (and input value requirements/limitations) here:
 
 ## API Schema
 
+### Tokenize
+
+```http
+HTTP POST https://api.sandbox.verygoodvault.com/aliases
+headers:
+    'Content-Type: application/json'
+```
+```json
+{
+  "data": [
+    {
+      "value": "98761234019273877823782302238889920029",
+      "classifiers": [
+        "card_number"
+      ],
+      "format": "ALPHANUMERIC_SIX_T_FOUR"
+    },
+    {
+      "value": "Joe Business",
+      "classifiers": [
+        "card_name"
+      ],
+      "format": "ALPHANUMERIC_SIX_T_FOUR"
+    }
+  ]
+}
+```
+
+### Detokenize
+
 
 ## API Routes & Proxies
 Besides the usual direct API interaction your application can have with tokenization API use cases, VGS also supports enabling transactional proxies (intermediaries) that can handle securing PCI or sensitive information during transactions with 3rd party providers (e.g. PSPs).
