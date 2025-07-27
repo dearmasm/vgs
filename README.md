@@ -34,7 +34,7 @@ POST /aliases
 {
   "data": [
     {
-      "value": $VALUE,
+      "value": "$VALUE",
       "classifiers": [
         "$APP-DEFINED-LABEL"
       ],
