@@ -30,7 +30,7 @@ Reference VGS different formats (and input value requirements/limitations) here:
 
 ### Tokenize
 
-```http
+```python
 HTTP POST https://api.sandbox.verygoodvault.com/aliases
 headers:
     'Content-Type: application/json'
