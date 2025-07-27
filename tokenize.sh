@@ -14,6 +14,14 @@ if [ -z "$VGS_USERID" ] || [ -z "$VGS_PASSWORD" ]; then
   exit 0
 fi  
 
+# if VGS_TOKEN_ALIAS_FORMAT is not set, default to UUID
+if [ -z "$VGS_TOKEN_ALIAS_FORMAT" ]; then
+  export VGS_TOKEN_ALIAS_FORMAT="UUID"
+  echo "VGS_TOKEN_ALIAS_FORMAT is not set. Defaulting to UUID."
+else
+  echo "Using VGS_TOKEN_ALIAS_FORMAT: $VGS_TOKEN_ALIAS_FORMAT"
+fi
+
 # Define the tokens to be sent to the API
 # Each token is a string in the format "value:classifier"
 
@@ -36,17 +44,18 @@ done
 #   "123:cvc"
 # )
 
-
 # Build JSON data from tokenize_values array
 json_data='{"data":['
 for item in "${tokenize_values[@]}"; do
   value="${item%%:*}"
   classifier="${item#*:}"
-  json_data+='{"value":"'"$value"'","classifiers":["'"$classifier"'"],"format":"UUID"},'
+  json_data+='{"value":"'"$value"'","classifiers":["'"$classifier"'"],"format":"'"$VGS_TOKEN_ALIAS_FORMAT"'"},'
 done
 # Remove trailing comma and close JSON array/object
 json_data="${json_data%,}]}"
 
+echo "JSON data sent to API:"
+echo "$json_data" | jq .
 
 # Tokenize sensitive information using the Very Good Vault API
 response=$(curl https://api.sandbox.verygoodvault.com/aliases \
@@ -55,7 +64,7 @@ response=$(curl https://api.sandbox.verygoodvault.com/aliases \
   -H 'Content-Type: application/json' \
   -s \
   -d "$json_data")
-  #-v)      # Uncomment for verbose output
+
 
 # Check if the API call was successful
 if [ $? -ne 0 ]; then
