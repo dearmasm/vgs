@@ -43,14 +43,50 @@ headers:
       "classifiers": [
         "card_number"
       ],
-      "format": "ALPHANUMERIC_SIX_T_FOUR"
+      "format": "UUID"
     },
     {
       "value": "Joe Business",
       "classifiers": [
         "card_name"
       ],
-      "format": "ALPHANUMERIC_SIX_T_FOUR"
+      "format": "UUID"
+    }
+  ]
+}
+```
+
+Response from API:
+```json
+{
+  "data": [
+    {
+      "value": "98761234019273877823782302238889920029",
+      "classifiers": [
+        "card_number"
+      ],
+      "aliases": [
+        {
+          "alias": "tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6",
+          "format": "UUID"
+        }
+      ],
+      "created_at": "2025-07-14T18:36:29Z",
+      "storage": "PERSISTENT"
+    },
+    {
+      "value": "Joe Business",
+      "classifiers": [
+        "card_name"
+      ],
+      "aliases": [
+        {
+          "alias": "tok_sandbox_k4FQhNkLDikwgfrYWrFqbu",
+          "format": "UUID"
+        }
+      ],
+      "created_at": "2025-07-14T18:31:20Z",
+      "storage": "PERSISTENT"
     }
   ]
 }
