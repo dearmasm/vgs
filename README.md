@@ -1,4 +1,4 @@
-# vgs
+# Very Good Security (VGS) API Reference Implementation
 VGS Data Tokenization API use cases
 
 ## Setup
