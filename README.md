@@ -46,15 +46,17 @@ POST /aliases
 ```
 
 ### Detokenize
-
+```http
+GET /aliases?q=<$VALUE1>,<$VALUE2>...
+```
 
 
 ## API Examples
 
 ### Tokenize
 
-```python
-HTTP POST https://api.sandbox.verygoodvault.com/aliases
+```http
+POST https://api.sandbox.verygoodvault.com/aliases
 headers:
     'Content-Type: application/json'
 ```
@@ -117,12 +119,11 @@ Response from API:
 
 ### Detokenize
 
-```python
-GET ./detokenize.sh tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
+```http
+GET https://api.sandbox.verygoodvault.com/aliases?q=tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
 headers:
     'Content-Type: application/json'
 ```
-
 Response from API:
 ```json
 {
@@ -170,7 +171,6 @@ Response from API:
   }
 }
 ```
-
 
 
 ## API Routes & Proxies
