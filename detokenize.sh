@@ -7,7 +7,7 @@
 
 # VGS detokinizer API:
 # curl https://api.sandbox.verygoodvault.com/aliases\?q=tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu,tok_sandbox_6deimuQsShyRd4EmCXfx1Y,tok_sandbox_tp7DQVCDCVLaPVawjrQn6D \
-#  -u $USERID:$PASSWORD \
+#  -u $USERID:$VGS_PASSWORD \
 #  -H 'Content-Type: application/json' \
 #  -s
 

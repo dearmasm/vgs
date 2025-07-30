@@ -117,6 +117,61 @@ Response from API:
 
 ### Detokenize
 
+```python
+HTTP GET ./detokenize.sh tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
+headers:
+    'Content-Type: application/json'
+```
+
+Response from API:
+```json
+{
+  "data": {
+    "tok_sandbox_k4FQhNkLDikwgfrYWrFqbu": {
+      "value": "Joe Business",
+      "classifiers": [
+        "card_name"
+      ],
+      "aliases": [
+        {
+          "alias": "tok_sandbox_k4FQhNkLDikwgfrYWrFqbu",
+          "format": "UUID"
+        },
+        {
+          "alias": "vgssbx00evBzAZvJrraZtOICflbCT",
+          "format": "VGS_FIXED_LEN_GENERIC"
+        }
+      ],
+      "created_at": "2025-07-14T18:31:20Z",
+      "storage": "PERSISTENT"
+    },
+    "tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6": {
+      "value": "98761234019273877823782302238889920029",
+      "classifiers": [
+        "card_number"
+      ],
+      "aliases": [
+        {
+          "alias": "987612mj2rvB03V0029",
+          "format": "ALPHANUMERIC_SIX_T_FOUR"
+        },
+        {
+          "alias": "vgssbx00Wxk6tfLfWPKnh45rADIV3",
+          "format": "VGS_FIXED_LEN_GENERIC"
+        },
+        {
+          "alias": "tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6",
+          "format": "UUID"
+        }
+      ],
+      "created_at": "2025-07-14T18:36:29Z",
+      "storage": "PERSISTENT"
+    }
+  }
+}
+```
+
+
 
 ## API Routes & Proxies
 Besides the usual direct API interaction your application can have with tokenization API use cases, VGS also supports enabling transactional proxies (intermediaries) that can handle securing PCI or sensitive information during transactions with 3rd party providers (e.g. PSPs).
