@@ -118,7 +118,7 @@ Response from API:
 ### Detokenize
 
 ```python
-HTTP GET ./detokenize.sh tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
+GET ./detokenize.sh tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
 headers:
     'Content-Type: application/json'
 ```
