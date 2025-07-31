@@ -1,11 +1,12 @@
 # Very Good Security (VGS) API Reference Implementation
-VGS Data Tokenization API use cases
+VGS Data Tokenization API use cases and examples
 
 ## Setup
 Configure VGS account user ID and password credentials as environmental exports:
+Note: Use tokenized BasicAuth password provided by VGS in developers playground test page
 ```python
-export VGS_USERID={my_vgs_userid}
-export VGS_PASSWORD={my_vgs_password}
+export VGS_USERID={my_vgs_userid}.     # tokenized (see above note)
+export VGS_PASSWORD={my_vgs_password}  # tokenized (see above note)
 ```
 
 ## Optional Configuration
