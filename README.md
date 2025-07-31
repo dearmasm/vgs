@@ -138,10 +138,6 @@ Response from API:
         {
           "alias": "tok_sandbox_k4FQhNkLDikwgfrYWrFqbu",
           "format": "UUID"
-        },
-        {
-          "alias": "vgssbx00evBzAZvJrraZtOICflbCT",
-          "format": "VGS_FIXED_LEN_GENERIC"
         }
       ],
       "created_at": "2025-07-14T18:31:20Z",
@@ -153,14 +149,6 @@ Response from API:
         "card_number"
       ],
       "aliases": [
-        {
-          "alias": "987612mj2rvB03V0029",
-          "format": "ALPHANUMERIC_SIX_T_FOUR"
-        },
-        {
-          "alias": "vgssbx00Wxk6tfLfWPKnh45rADIV3",
-          "format": "VGS_FIXED_LEN_GENERIC"
-        },
         {
           "alias": "tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6",
           "format": "UUID"
