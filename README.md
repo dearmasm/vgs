@@ -48,7 +48,7 @@ POST /aliases
 
 ### Detokenize
 ```http
-GET /aliases?q=<$VALUE1>,<$VALUE2>...
+GET /aliases?q=<$TOKEN1>,<$TOKEN2>...
 ```
 
 
