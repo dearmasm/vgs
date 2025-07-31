@@ -59,7 +59,7 @@ GET /aliases?q=<$VALUE1>,<$VALUE2>...
 ```http
 POST https://api.sandbox.verygoodvault.com/aliases
 headers:
-    Content-Type: application/json
+    "Content-Type: application/json"
 ```
 ```json
 {
