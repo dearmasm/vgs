@@ -3,10 +3,10 @@ VGS Data Tokenization API use cases and examples
 
 ## Setup
 Configure VGS account user ID and password credentials as environmental exports:
-Note: Use tokenized BasicAuth password provided by VGS in developers playground test page
+Note: Use encoded BasicAuth userID and password provided by VGS in developers playground test page
 ```python
-export VGS_USERID={my_vgs_userid}.     # tokenized (see above note)
-export VGS_PASSWORD={my_vgs_password}  # tokenized (see above note)
+export VGS_USERID={my_vgs_userid}.     # encoded (see above note)
+export VGS_PASSWORD={my_vgs_password}  # encoded (see above note)
 ```
 
 ## Optional Configuration
