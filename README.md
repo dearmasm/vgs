@@ -123,7 +123,7 @@ Response from API:
 ```http
 GET https://api.sandbox.verygoodvault.com/aliases?q=tok_sandbox_eEhvAbg5dkgu2wuzqeCmq6,tok_sandbox_k4FQhNkLDikwgfrYWrFqbu
 headers:
-    Content-Type: application/json
+    "Content-Type: application/json"
 ```
 Response from API:
 ```json
